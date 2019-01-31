@@ -25,9 +25,9 @@ let wait = setInterval(() => {
         btn.style = "positon: fixed; left: -8px; top: 8px;"
         $('body').appendChild(btn)
         btn.addEventListener('click', () => { // Get data on click
-        let name = $('.track-info__name').textContent
-        let artist = $('.track-info__artists span').textContent
-        let trackName = (artist + " - " + name).replace(/ \(feat. .+\)/g, '') // Remove (feat. [name]) with regex
+            let name = $('.track-info__name').textContent
+            let artist = $('.track-info__artists span').textContent
+            let trackName = (artist + " - " + name).replace(/ \(feat. .+\)/g, '') // Remove (feat. [name]) with regex
         const url = go(trackName)
         lyrics(url)
         })
